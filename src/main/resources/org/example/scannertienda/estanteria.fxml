@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.scannertienda.EstanteriaController">
+    <VBox spacing="10" alignment="CENTER" prefWidth="800" prefHeight="600">
+        <Label text="🛒 Estantería de Productos" style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+        <Accordion fx:id="acordeonCategorias" prefWidth="700" />
+    </VBox>
+</AnchorPane>
