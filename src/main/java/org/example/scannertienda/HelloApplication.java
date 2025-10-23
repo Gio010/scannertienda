@@ -11,23 +11,25 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        // MODIFICADO: Se utiliza la ruta absoluta para asegurar que Maven encuentre el recurso.
-        // La barra '/' indica que la búsqueda comienza en la carpeta 'resources'.
-        // La ruta completa en el classpath es /org/example/scannertienda/estanteria.fxml
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/org/example/scannertienda/estanteria.fxml"));
+        //Cargar la ventana de selección de roles
+        //la ruta relativa al mismo paquete para simplificar la búsqueda.
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/org/example/scannertienda/inicio-roles-view.fxml"));
 
-        // **Verificación añadida**: Asegura que el recurso fue encontrado antes de cargarlo
-        if (fxmlLoader.getLocation() == null) {
-            throw new IOException("Error: No se encontró el recurso FXML en la ruta '/org/example/scannertienda/estanteria.fxml'.");
+        try {
+            // El tamaño se ajusta para la ventana de selección de roles (600x400)
+            Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+            stage.setTitle("AutomaticTienda S.A");
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            System.err.println("❌ ERROR FATAL: No se pudo cargar 'inicio-roles-view.fxml'.");
+            e.printStackTrace();
+            throw e;
         }
-
-        Scene scene = new Scene(fxmlLoader.load(), 800, 600); // Tamaño más amplio para la estantería
-        stage.setTitle("🛒 Estantería - Scanner Tienda");
-        stage.setScene(scene);
-        stage.show();
     }
 
     public static void main(String[] args) {
+        // En JavaFX moderno, launch(args) es la forma estándar
         launch(args);
     }
 }

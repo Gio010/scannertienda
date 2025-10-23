@@ -22,6 +22,43 @@
             <version>42.7.8</version>
         </dependency>
         <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>kernel</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/external_libs/kernel-7.2.5.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>layout</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/external_libs/layout-7.2.5.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>io</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/external_libs/io-7.2.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itext-commons</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/external_libs/itext-commons-7.2.5.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.7</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/external_libs/slf4j-api-2.0.7.jar</systemPath>
+        </dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>21.0.6</version>

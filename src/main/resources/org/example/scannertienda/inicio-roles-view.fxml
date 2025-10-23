@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.scannertienda.controller.InicioRolesController">
+    <padding>
+        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+    </padding>
+    <Label text="Bienvenido">
+        <font>
+            <Font name="System Bold" size="28.0" />
+        </font>
+        <VBox.margin>
+            <Insets bottom="10.0" />
+        </VBox.margin>
+    </Label>
+    <Button fx:id="btnConsumidor" mnemonicParsing="false" onAction="#abrirConsumidor" prefHeight="70.0" prefWidth="300.0" style="-fx-background-color: #007bff; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="CLIENTE (Punto de Venta)" />
+    <Button fx:id="btnTrabajador" mnemonicParsing="false" onAction="#abrirTrabajador" prefHeight="70.0" prefWidth="300.0" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;" text="TRABAJADOR (Administración)" />
+</VBox>
